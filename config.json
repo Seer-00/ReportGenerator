@@ -1,0 +1,30 @@
+{
+    "enabledpages": [1, 2, 3, 4, 5, 6, 7],
+
+    "optlist": {
+    	"errorpolicy": "return",
+	    "searchpath": [
+	    	"{./resource}",
+	    	"{./resource/font}",
+	    	"{./resource/demo}"
+	    ],
+	    "fontoutline": [
+	    	"calibri=calibri.ttf",
+	    	"msyh=MicrosoftYaHei.ttf",
+	    	"msyhbd=MicrosoftYaHei-Bold.ttf",
+	    	"simsun=SimSun.ttf"
+	    ]
+    },
+    
+    "res_template_default": "./resource/template_default.xml",
+    "res_inputflags": "./resource/inputflags.json",
+    "res_input_dft" : "./resource/input_default.json",
+    "res_input_user": "./input/input_user.json",
+    "res_input_demo": "./resource/demo/input_demo.json",
+
+    "output_file": "./temp/_output_test.pdf",
+    "file_info": {
+    	"Creator": "Report Generator",
+    	"Title": "3D 建模可视化报告"
+    }
+}

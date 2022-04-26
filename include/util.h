@@ -7,17 +7,26 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <vector>
 #include <windows.h>
 
 std::string str_to_utf8(const std::string& str);
 
-std::string wstr_to_str(const std::wstring& ws);
+std::string utf8_to_str(const std::string& str);
 
-std::wstring int_to_wstr(const int& i);
+std::string wstr2str(const std::wstring& ws);
 
-std::wstring str_to_wstr(const std::string& s);
+std::string int2str(const int& i);
 
-void fill_today_date(std::vector<std::wstring>& ymd);
+std::wstring int2wstr(const int& i);
+
+std::wstring str2wstr(const std::string& s);
+
+int str2int(const std::string& s);
+
+double str2double(const std::string& s);
+
+std::string get_date(const std::string& key);
+
+std::string replace_all(std::string& str, const std::string& _old, const std::string& _new);
 
 #endif /* UTIL_H */

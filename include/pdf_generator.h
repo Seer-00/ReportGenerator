@@ -1,24 +1,23 @@
 #pragma once
-#ifndef MY_PDFLIB_H
-#define MY_PDFLIB_H
+#ifndef PDF_GENERATOR_H
+#define PDF_GENERATOR_H
 
-#include "pdflib.hpp"
+#include "pdflib/pdflib.hpp"
 
 #include "util.h"
-#include "my_exception.h"
+#include "program_exception.h"
 
 using namespace std;
 using namespace pdflib;
 
-class MyPDFlib
+class PDFGenerator // 单例，被调用于创建PDF文件
 {
 public:
-	MyPDFlib();
-	~MyPDFlib();
+	static PDFGenerator* get_instance();
 
-	PDFlib& get_p();
+	PDFlib& get_pdflib();
 
-	int load_font(const wstring& fontname, const wstring& encoding, const wstring& optlist);
+	//int load_font(const wstring& fontname, const wstring& encoding, const wstring& optlist);
 
 	int load_image(const wstring& imagetype, const wstring& filename, const wstring& optlist);
 
@@ -35,9 +34,14 @@ public:
 	wstring fit_table(int table, double llx, double lly, double urx, double ury, const wstring& optlist);
 
 private:
-	PDFlib p;
+	PDFGenerator();
+	~PDFGenerator();
+	PDFGenerator(const PDFGenerator&);
+
+private:
+	PDFlib pdflib;
 };
 
-#endif // !MY_PDFLIB_H
+#endif // !PDF_GENERATOR_H
 
 

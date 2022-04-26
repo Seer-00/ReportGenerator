@@ -1,6 +1,6 @@
 #pragma once
-#ifndef MY_EXCEPTION_H
-#define MY_EXCEPTION_H
+#ifndef PROGRAM_EXCEPTION_H
+#define PROGRAM_EXCEPTION_H
 
 #include <exception>
 #include <string>
@@ -85,6 +85,32 @@ private:
     string message;
 };
 
-#endif // !MY_EXCEPTION_H
+class XMLParserException : public exception
+{
+public:
+    XMLParserException();
+    XMLParserException(string s);
+    XMLParserException(wstring ws);
+    ~XMLParserException();
 
+    const char* what() const throw ();
 
+private:
+    string message;
+};
+
+class JSONParserException : public exception
+{
+public:
+    JSONParserException();
+    JSONParserException(string s);
+    JSONParserException(wstring ws);
+    ~JSONParserException();
+
+    const char* what() const throw ();
+
+private:
+    string message;
+};
+
+#endif // !PROGRAM_EXCEPTION_H

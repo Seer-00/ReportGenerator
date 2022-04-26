@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="gb2312"?>
+<page>
+	<id>1</id>
+
+	<beginpage>	
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<image>
+		<inputflag>p-1-img-1</inputflag>
+		<filename>__p-1-img-1__</filename>
+		<type>png</type>
+		<optlist></optlist>
+		<fit>
+			<x>297.5</x>
+			<y>129</y>
+			<optlist>position={center}</optlist>
+		</fit>
+	</image>
+
+	<textflow>
+		<item>
+			<text>3D </text>
+			<optlist>fontname=calibri fontsize=20 encoding=unicode alignment=center fillcolor={rgb 0.180392 0.454901 0.709803}</optlist>
+		</item>
+		<item>
+			<text>建模可视化报告</text>
+			<optlist>fontname=simsun fontsize=20 encoding=unicode alignment=center fillcolor={rgb 0.180392 0.454901 0.709803}</optlist>
+		</item>
+		<fit>
+			<llx>0</llx>
+			<lly>208</lly>
+			<urx>595</urx>
+			<ury>240</ury>
+			<optlist>verticalalign={center}</optlist>
+		</fit>
+	</textflow>
+
+	<textline>
+		<inputflag>p-1-tl-1</inputflag>
+		<text>__p-1-tl-1__</text>
+		<x>297.5</x>
+		<y>269</y>
+		<optlist>fontname=msyh fontsize=10.5 encoding=unicode position={center} fillcolor={rgb 0.0 0.439215 0.752941}</optlist>
+	</textline>
+
+	<textline>
+		<inputflag>p-1-tl-2</inputflag>
+		<text>__p-1-tl-1__</text>
+		<x>297.5</x>
+		<y>649</y>
+		<optlist>fontname=simsun fontsize=14 encoding=unicode position={center} fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+	</textline>
+
+	<textflow>
+		<item>
+			<inputflag>p-1-tf-1</inputflag>
+			<text>__p-1-tf-1__</text>
+			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<item>
+			<text> 年 </text>
+			<optlist>fontname=simsun fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<item>
+			<inputflag>p-1-tf-2</inputflag>
+			<text>__p-1-tf-2__</text>
+			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<item>
+			<text> 月 </text>
+			<optlist>fontname=simsun fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<item>
+			<inputflag>p-1-tf-3</inputflag>
+			<text>__p-1-tf-3__</text>
+			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<item>
+			<text> 日 </text>
+			<optlist>fontname=simsun fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
+		</item>
+		<fit>
+			<llx>0</llx>
+			<lly>670</lly>
+			<urx>595</urx>
+			<ury>685</ury>
+			<optlist>verticalalign={center}</optlist>
+		</fit>
+	</textflow>
+
+	<textline>
+		<text>1</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>2</id>
+
+	<beginpage>	
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<textline>
+		<text>3D 建模可视化报告</text>
+		<x>297.5</x>
+		<y>72</y>
+		<optlist>fontname=msyhbd fontsize=18 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>编\u3000号：</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=72 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>2</row>
+			<text>姓\u3000名：</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=72 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>3</row>
+			<text>性\u3000别：</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=72 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-1</inputflag>
+			<col>2</col>
+			<row>1</row>
+			<text>__p-2-tbl-1__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=165 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-2</inputflag>
+			<col>2</col>
+			<row>2</row>
+			<text>__p-2-tbl-2__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=165 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-3</inputflag>
+			<col>2</col>
+			<row>3</row>
+			<text>__p-2-tbl-3__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=165 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>1</row>
+			<text>建模日期：</text>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=92 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>2</row>
+			<text>医\u3000\u3000院：</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=92 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>3</row>
+			<text>需求科室：</text>
+			<optlist>fittextline={position={right center} fontname=msyhbd fontsize=12} colwidth=92 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-4</inputflag>
+			<col>4</col>
+			<row>1</row>
+			<text>__p-2-tbl-4__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=154 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-5</inputflag>
+			<col>4</col>
+			<row>2</row>
+			<text>__p-2-tbl-5__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=154 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-2-tbl-6</inputflag>
+			<col>4</col>
+			<row>3</row>
+			<text>__p-2-tbl-6__</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=154 rowheight=23 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>119</lly>
+			<urx>538.5</urx>
+			<ury>188</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-2-img-1</inputflag>
+				<filename>__p-2-img-1__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=482 rowheight=412 colspan=8 margin=4</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>2</row>
+			<text>颜色标示：</text>
+			<optlist>fittextline={position={left center} fontname=msyhbd fontsize=11} rowheight=32 colspan=8 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>3</row>
+			<text>x</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>4</row>
+			<text>x</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>3</row>
+			<text>肺静脉血管</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>4</row>
+			<text>肺</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>3</row>
+			<text>x</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>4</col>
+			<row>3</row>
+			<text>肺动脉血管</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>4</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>4</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>5</col>
+			<row>3</row>
+			<text>x</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>5</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>5</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>6</col>
+			<row>3</row>
+			<text>支气管</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>6</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>6</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>7</col>
+			<row>3</row>
+			<text>x</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>7</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>7</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>8</col>
+			<row>3</row>
+			<text>占位</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>8</col>
+			<row>4</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>8</col>
+			<row>5</row>
+			<text>?</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>188</lly>
+			<urx>538.5</urx>
+			<ury>820</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<textline>
+		<text>2</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>3</id>
+
+	<beginpage>
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>空间位置关系图</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=12} colwidth=482 rowheight=42 margin=12</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>57</lly>
+			<urx>538.5</urx>
+			<ury>99</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>上面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<text>下面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>99</lly>
+			<urx>538.5</urx>
+			<ury>122</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-3-img-1</inputflag>
+				<filename>__p-3-img-1__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=238 margin=4</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-3-img-2</inputflag>
+				<filename>__p-3-img-2__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=238 margin=4</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>122</lly>
+			<urx>538.5</urx>
+			<ury>360</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>正面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<text>背面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>360</lly>
+			<urx>538.5</urx>
+			<ury>383</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-3-img-3</inputflag>
+				<filename>__p-3-img-3__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=330 margin=4</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-3-img-4</inputflag>
+				<filename>__p-3-img-4__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=330 margin=4</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>383</lly>
+			<urx>538.5</urx>
+			<ury>713</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0}}</optlist>
+		</fit>
+	</table>
+
+	<textline>
+		<text>3</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>4</id>
+
+	<beginpage>
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>空间位置关系图</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=12} colwidth=482 rowheight=42 margin=12</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>57</lly>
+			<urx>538.5</urx>
+			<ury>99</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>左侧面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<text>右侧面观：</text>
+			<optlist>fittextline={position={left center} fontname=msyh fontsize=10.5} colwidth=241 rowheight=23 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>99</lly>
+			<urx>538.5</urx>
+			<ury>122</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-4-img-1</inputflag>
+				<filename>__p-4-img-1__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=428 margin=4</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>1</row>
+			<celltype>image</celltype>
+			<image>
+				<inputflag>p-4-img-2</inputflag>
+				<filename>__p-4-img-2__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=241 rowheight=428 margin=4</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>122</lly>
+			<urx>538.5</urx>
+			<ury>550</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0}}</optlist>
+		</fit>
+	</table>
+
+	<textline>
+		<text>4</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>5</id>
+
+	<beginpage>
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<textline>
+		<text>3D 模型浏览区域</text>
+		<x>297.5</x>
+		<y>120</y>
+		<optlist>fontname=msyhbd fontsize=16 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<annotation3d>
+		<view3d>
+			<inputflag>p-5-view-1</inputflag>
+			<username>InitialView</username>
+			<camera2world>__p-5-view-1__</camera2world>
+			<optlist>type=U3D background={fillcolor=Lavender}</optlist>
+		</view3d>
+		<data3d>
+			<inputflag>p-5-data-1</inputflag>
+			<filename>__p-5-data-1__</filename>
+			<optlist>type=U3D</optlist>
+		</data3d>
+		<llx>100.5</llx>
+		<lly>160</lly>
+		<urx>494.5</urx>
+		<ury>540</ury>
+		<type>3D</type>
+		<optlist>name=3d_model contents=U3D usercoordinates 3Dactivate={enable=open}</optlist>
+	</annotation3d>
+
+	<textline>
+		<text>5</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>6</id>
+
+	<beginpage>
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>原始 CT DICOM 数据分析</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=12} colwidth=482 rowheight=73 colspan=4 margin=12</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>2</row>
+			<text>数据扫描部位：</text>
+			<optlist>fittextline={position={center} fontname=msyhbd fontsize=10.5} colwidth=120.5 rowheight=39 margin=12</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>2</row>
+			<text>图像来源设备：</text>
+			<optlist>fittextline={position={center} fontname=msyhbd fontsize=10.5} colwidth=120.5 rowheight=39 margin=12</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-1</inputflag>
+			<col>2</col>
+			<row>2</row>
+			<text>__p-6-tbl-1__</text>
+			<optlist>fittextline={position={center} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=39 margin=12</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-2</inputflag>
+			<col>4</col>
+			<row>2</row>
+			<text>__p-6-tbl-2__</text>
+			<optlist>fittextline={position={center} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=39 margin=12</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>3</row>
+			<text>数据报告项</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=10.5} colwidth=120.5 rowheight=39 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>2</col>
+			<row>3</row>
+			<text>文件数</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=10.5} colwidth=120.5 rowheight=39 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>3</col>
+			<row>3</row>
+			<text>备注</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=10.5} colwidth=120.5 rowheight=39 colspan=2 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>4</row>
+			<text>DICOM数据文件数量</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>5</row>
+			<text>分期数量</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>6</row>
+			<text>薄层扫描期</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>7</row>
+			<text>原始CT诊断报告</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-3</inputflag>
+			<col>2</col>
+			<row>4</row>
+			<text>__p-6-tbl-3__</text>
+			<optlist>fittextline={position={center top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-4</inputflag>
+			<col>2</col>
+			<row>5</row>
+			<text>__p-6-tbl-4__</text>
+			<optlist>fittextline={position={center top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-5</inputflag>
+			<col>2</col>
+			<row>6</row>
+			<text>__p-6-tbl-5__</text>
+			<optlist>fittextline={position={center top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-6</inputflag>
+			<col>2</col>
+			<row>7</row>
+			<text>__p-6-tbl-6__</text>
+			<optlist>fittextline={position={center top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-7</inputflag>
+			<col>3</col>
+			<row>4</row>
+			<text>__p-6-tbl-7__</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 colspan=2 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-8</inputflag>
+			<col>3</col>
+			<row>5</row>
+			<text>__p-6-tbl-8__</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 colspan=2 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-9</inputflag>
+			<col>3</col>
+			<row>6</row>
+			<text>__p-6-tbl-9__</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 colspan=2 margin=6</optlist>
+		</cell>
+		<cell>
+			<inputflag>p-6-tbl-10</inputflag>
+			<col>3</col>
+			<row>7</row>
+			<text>__p-6-tbl-10__</text>
+			<optlist>fittextline={position={left top} fontname=msyh fontsize=10.5} colwidth=120.5 rowheight=56 colspan=2 margin=6</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>126</lly>
+			<urx>538.5</urx>
+			<ury>504</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<textline>
+		<text>6</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
+
+<page>
+	<id>7</id>
+
+	<beginpage>
+		<width>595</width>
+		<height>842</height>
+		<optlist>topdown=true</optlist>
+	</beginpage>
+
+	<table>
+		<cell>
+			<col>1</col>
+			<row>1</row>
+			<text>3D 建模可视化说明</text>
+			<optlist>fittextline={position={center top} fontname=msyhbd fontsize=12} colwidth=482 rowheight=42 margin=12</optlist>
+		</cell>
+		<cell>
+			<col>1</col>
+			<row>2</row>
+			<celltype>textflow</celltype>
+			<textflow>
+				<item>
+					<text>根据CT图像：\n在薄层扫描期重建了</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=100%</optlist>
+				</item>
+				<item>
+					<inputflag>p-7-tf-1</inputflag>
+					<text>__p-7-tf-1__</text>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300% underline</optlist>
+				</item>
+				<item>
+					<text>等模型。</text>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300% nounderline</optlist>
+				</item>
+				<item>
+					<text>\n备注：\n</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300%</optlist>
+				</item>
+				<item>
+					<inputflag>p-7-tf-2</inputflag>
+					<text>__p-7-tf-2__</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300%</optlist>
+				</item>
+				<item>
+					<text>\n说明：\n</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300%</optlist>
+				</item>
+				<item>
+					<inputflag>p-7-tf-3</inputflag>
+					<text>__p-7-tf-3__</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyh fontsize=10.5 leftindent=18 parindent=0 alignment=justify leading=300%</optlist>
+				</item>
+				<item>
+					<text>\n声明：</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyhbd fontsize=10.5 leftindent=0 parindent=18 alignment=justify leading=300%</optlist>
+				</item>
+				<item>
+					<inputflag>p-7-tf-4</inputflag>
+					<text>__p-7-tf-4__</text>
+					<escapechar>\n</escapechar>
+					<optlist>fontname=msyhbd fontsize=10.5 leftindent=0 parindent=18 alignment=justify leading=300%</optlist>
+				</item>
+			</textflow>
+			<optlist>fittextflow={verticalalign=top} colwidth=482 margin=8</optlist>
+		</cell>
+		<fit>
+			<llx>56.5</llx>
+			<lly>72</lly>
+			<urx>538.5</urx>
+			<ury>530</ury>
+			<optlist>stroke={{line=frame linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}} {line=other linewidth=0.3 strokecolor={rgb 0.741176 0.839215 0.933333}}}</optlist>
+		</fit>
+	</table>
+
+	<textflow>
+		<item>
+			<text>3D重建工程师：</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<inputflag>p-7-tf-5</inputflag>
+			<text>__p-7-tf-5__</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<text>\u3000\u3000\u3000\u3000\u3000\u3000</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<text>报告人：</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<inputflag>p-7-tf-6</inputflag>
+			<text>__p-7-tf-6__</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<text>\u3000\u3000\u3000\u3000\u3000\u3000</text>
+			<escapechar>\u3000</escapechar>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<text>审核人：</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<item>
+			<inputflag>p-7-tf-7</inputflag>
+			<text>__p-7-tf-7__</text>
+			<optlist>fontname=msyh fontsize=11 encoding=unicode alignment=center</optlist>
+		</item>
+		<fit>
+			<llx>0</llx>
+			<lly>560</lly>
+			<urx>595</urx>
+			<ury>580</ury>
+			<optlist>verticalalign={center}</optlist>
+		</fit>
+	</textflow>
+
+	<textline>
+		<text>7</text>
+		<x>297.5</x>
+		<y>787</y>
+		<optlist>fontname=simsun fontsize=10 encoding=unicode position={center}</optlist>
+	</textline>
+
+	<endpage>
+		<optlist></optlist>
+	</endpage>
+</page>
