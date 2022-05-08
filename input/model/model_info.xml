@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Project Name="project.xml">
+	<NodeList NodeCount="12">
+		<Node Caption="" ID="0" FatherID="-1" DataNodeType="0">
+			<Data Value="142M">
+				<DataPath PathType="0">IMG-0001-00001.dcm</DataPath>
+				<FileName>A</FileName>
+				<FileType>dicom</FileType>
+				<ReadMethod>ImageData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">A</Property>
+				<Property Name="opacity">1</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color"/>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">dicom</Property>
+				<Property Name="position">195.1181640625,195.1181640625,142</Property>
+				<Property Name="roi_bound">0,511,0,511,0,284</Property>
+				<Property Name="organ_name">A</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="1" FatherID="-1" DataNodeType="2">
+			<Data Value="0.3M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>右肺上叶</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">右肺上叶</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,0.800000011920929,0.627451002597809</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">右肺上叶</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="2" FatherID="-1" DataNodeType="2">
+			<Data Value="0.5M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>右肺下叶</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">右肺下叶</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">0.627451002597809,1,0.800000011920929</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">右肺下叶</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="3" FatherID="-1" DataNodeType="2">
+			<Data Value="0.3M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>右肺中叶</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">右肺中叶</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">0.627451002597809,1,1</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">右肺中叶</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="4" FatherID="-1" DataNodeType="2">
+			<Data Value="0.4M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>左肺上叶</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">左肺上叶</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,0.91372549533844,0.992156863212585</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">左肺上叶</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="5" FatherID="-1" DataNodeType="2">
+			<Data Value="0.4M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>左肺下叶</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">左肺下叶</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,0.980392158031464,0.627451002597809</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">左肺下叶</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="6" FatherID="-1" DataNodeType="2">
+			<Data Value="1.2M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>气管</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">气管</Property>
+				<Property Name="opacity">1</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,1,1</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">气管</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="7" FatherID="-1" DataNodeType="2">
+			<Data Value="14.8M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>皮肤</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">皮肤</Property>
+				<Property Name="opacity">0.3</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,0.800000011920929,0.627451002597809</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">皮肤</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="8" FatherID="-1" DataNodeType="2">
+			<Data Value="1.3M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>肺</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">肺</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">0,1,1</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">肺</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="9" FatherID="-1" DataNodeType="2">
+			<Data Value="0M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>肺结节</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">肺结节</Property>
+				<Property Name="opacity">1</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">0,1,0.250980406999588</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">肺结节</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="10" FatherID="-1" DataNodeType="2">
+			<Data Value="5.3M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>肺血管</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">肺血管</Property>
+				<Property Name="opacity">1</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,0,0</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">肺血管</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+		<Node Caption="" ID="11" FatherID="-1" DataNodeType="2">
+			<Data Value="8.4M">
+				<DataPath PathType="1">ProjectDir</DataPath>
+				<FileName>骨骼</FileName>
+				<FileType>stl</FileType>
+				<ReadMethod>SurfaceData</ReadMethod>
+			</Data>
+			<PropertyList PropertyCount="12">
+				<Property Name="name">骨骼</Property>
+				<Property Name="opacity">0.4</Property>
+				<Property Name="mask_bit">0</Property>
+				<Property Name="color">1,1,1</Property>
+				<Property Name="Series Instance UID"/>
+				<Property Name="dcmtype">stl</Property>
+				<Property Name="position"/>
+				<Property Name="roi_bound"/>
+				<Property Name="organ_name">骨骼</Property>
+				<Property Name="window">400</Property>
+				<Property Name="level">150</Property>
+				<Property Name="visible">1</Property>
+			</PropertyList>
+		</Node>
+	</NodeList>
+</Project>

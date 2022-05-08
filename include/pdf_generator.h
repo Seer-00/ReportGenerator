@@ -17,8 +17,6 @@ public:
 
 	PDFlib& get_pdflib();
 
-	//int load_font(const wstring& fontname, const wstring& encoding, const wstring& optlist);
-
 	int load_image(const wstring& imagetype, const wstring& filename, const wstring& optlist);
 
 	int load_3ddata(const wstring& filename, const wstring& optlist);

@@ -7,6 +7,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 #include <windows.h>
 
 std::string str_to_utf8(const std::string& str);
@@ -28,5 +29,7 @@ double str2double(const std::string& s);
 std::string get_date(const std::string& key);
 
 std::string replace_all(std::string& str, const std::string& _old, const std::string& _new);
+
+std::vector<std::string> split_string(const std::string& str, const char sep);
 
 #endif /* UTIL_H */

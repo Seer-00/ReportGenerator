@@ -139,3 +139,21 @@ std::string replace_all(std::string& str, const std::string& _old, const std::st
 	}
 	return ret;
 }
+
+std::vector<std::string> split_string(const std::string& str, const char sep)
+{
+	std::size_t previous = 0;
+	std::size_t current = str.find(sep);
+	std::vector<std::string> ret;
+	while (current != std::string::npos) {
+		if (current > previous) {
+			ret.push_back(str.substr(previous, current - previous));
+		}
+		previous = current + 1;
+		current = str.find(sep, previous);
+	}
+	if (previous != str.size()) {
+		ret.push_back(str.substr(previous));
+	}
+	return ret;
+}

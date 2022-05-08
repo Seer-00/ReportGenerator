@@ -38,16 +38,27 @@
 		</fit>
 	</textflow>
 
-	<textline>
-		<inputflag>p-1-tl-1</inputflag>
-		<text>__p-1-tl-1__</text>
-		<x>297.5</x>
-		<y>269</y>
-		<optlist>fontname=msyh fontsize=10.5 encoding=unicode position={center} fillcolor={rgb 0.0 0.439215 0.752941}</optlist>
-	</textline>
+	<textflow>
+		<item>
+			<text>编号：</text>
+			<optlist>fontname=msyh fontsize=10.5 encoding=unicode alignment=center fillcolor={rgb 0.0 0.439215 0.752941}</optlist>
+		</item>
+		<item>
+			<inputflag>p-1-tf-1</inputflag>
+			<text>__p-1-tf-1__</text>
+			<optlist>fontname=msyh fontsize=10.5 encoding=unicode alignment=center fillcolor={rgb 0.0 0.439215 0.752941}</optlist>
+		</item>
+		<fit>
+			<llx>0</llx>
+			<lly>262</lly>
+			<urx>595</urx>
+			<ury>284</ury>
+			<optlist>verticalalign={center}</optlist>
+		</fit>
+	</textflow>
 
 	<textline>
-		<inputflag>p-1-tl-2</inputflag>
+		<inputflag>p-1-tl-1</inputflag>
 		<text>__p-1-tl-1__</text>
 		<x>297.5</x>
 		<y>649</y>
@@ -56,8 +67,8 @@
 
 	<textflow>
 		<item>
-			<inputflag>p-1-tf-1</inputflag>
-			<text>__p-1-tf-1__</text>
+			<inputflag>p-1-tf-2</inputflag>
+			<text>__p-1-tf-2__</text>
 			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
 		</item>
 		<item>
@@ -65,8 +76,8 @@
 			<optlist>fontname=simsun fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
 		</item>
 		<item>
-			<inputflag>p-1-tf-2</inputflag>
-			<text>__p-1-tf-2__</text>
+			<inputflag>p-1-tf-3</inputflag>
+			<text>__p-1-tf-3__</text>
 			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
 		</item>
 		<item>
@@ -74,8 +85,8 @@
 			<optlist>fontname=simsun fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
 		</item>
 		<item>
-			<inputflag>p-1-tf-3</inputflag>
-			<text>__p-1-tf-3__</text>
+			<inputflag>p-1-tf-4</inputflag>
+			<text>__p-1-tf-4__</text>
 			<optlist>fontname=calibri fontsize=14 encoding=unicode alignment=center fillcolor={rgb 0.356862 0.607843 0.835294}</optlist>
 		</item>
 		<item>
@@ -233,145 +244,229 @@
 		<cell>
 			<col>1</col>
 			<row>3</row>
-			<text>x</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-1</generateflag>
+				<filename>__p-2-label-img-1__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>1</col>
 			<row>4</row>
-			<text>x</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-5</generateflag>
+				<filename>__p-2-label-img-5__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>1</col>
 			<row>5</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-9</generateflag>
+				<filename>__p-2-label-img-9__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>2</col>
 			<row>3</row>
-			<text>肺静脉血管</text>
+			<generateflag>p-2-label-text-1</generateflag>
+			<text>__p-2-label-text-1__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>2</col>
 			<row>4</row>
-			<text>肺</text>
+			<generateflag>p-2-label-text-5</generateflag>
+			<text>__p-2-label-text-5__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>2</col>
 			<row>5</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-9</generateflag>
+			<text>__p-2-label-text-9__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>3</col>
 			<row>3</row>
-			<text>x</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-2</generateflag>
+				<filename>__p-2-label-img-2__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>3</col>
 			<row>4</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-6</generateflag>
+				<filename>__p-2-label-img-6__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>3</col>
 			<row>5</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-10</generateflag>
+				<filename>__p-2-label-img-10__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>4</col>
 			<row>3</row>
-			<text>肺动脉血管</text>
+			<generateflag>p-2-label-text-2</generateflag>
+			<text>__p-2-label-text-2__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>4</col>
 			<row>4</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-6</generateflag>
+			<text>__p-2-label-text-6__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>4</col>
 			<row>5</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-10</generateflag>
+			<text>__p-2-label-text-10__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>5</col>
 			<row>3</row>
-			<text>x</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-3</generateflag>
+				<filename>__p-2-label-img-3__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>5</col>
 			<row>4</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-7</generateflag>
+				<filename>__p-2-label-img-7__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>5</col>
 			<row>5</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-11</generateflag>
+				<filename>__p-2-label-img-11__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>6</col>
 			<row>3</row>
-			<text>支气管</text>
+			<generateflag>p-2-label-text-3</generateflag>
+			<text>__p-2-label-text-3__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>6</col>
 			<row>4</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-7</generateflag>
+			<text>__p-2-label-text-7__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>6</col>
 			<row>5</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-11</generateflag>
+			<text>__p-2-label-text-11__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>7</col>
 			<row>3</row>
-			<text>x</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-4</generateflag>
+				<filename>__p-2-label-img-4__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>7</col>
 			<row>4</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-8</generateflag>
+				<filename>__p-2-label-img-8__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>7</col>
 			<row>5</row>
-			<text>?</text>
-			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=38.5 rowheight=32 margin=6</optlist>
+			<celltype>image</celltype>
+			<image>
+				<generateflag>p-2-label-img-12</generateflag>
+				<filename>__p-2-label-img-12__</filename>
+				<type>png</type>
+				<optlist></optlist>
+			</image>
+			<optlist>colwidth=38.5 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>8</col>
 			<row>3</row>
-			<text>占位</text>
+			<generateflag>p-2-label-text-4</generateflag>
+			<text>__p-2-label-text-4__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>8</col>
 			<row>4</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-8</generateflag>
+			<text>__p-2-label-text-8__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<cell>
 			<col>8</col>
 			<row>5</row>
-			<text>?</text>
+			<generateflag>p-2-label-text-12</generateflag>
+			<text>__p-2-label-text-12__</text>
 			<optlist>fittextline={position={left center} fontname=msyh fontsize=11} colwidth=82 rowheight=32 margin=6</optlist>
 		</cell>
 		<fit>
@@ -658,7 +753,7 @@
 			<inputflag>p-5-view-1</inputflag>
 			<username>InitialView</username>
 			<camera2world>__p-5-view-1__</camera2world>
-			<optlist>type=U3D background={fillcolor=Lavender}</optlist>
+			<optlist>type=U3D background={fillcolor={rgb 0.959803 0.959803 0.959803}}</optlist>
 		</view3d>
 		<data3d>
 			<inputflag>p-5-data-1</inputflag>

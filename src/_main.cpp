@@ -6,7 +6,10 @@ int main()
 {
 	try {
 		init();
-		parse_template();
+		//show_models();
+		//generate_views();
+		//generate_3D_data();
+		generate_report();
 	}
 	catch (PDFlib::Exception& ex) {
 		wcerr << L"PDFlib exception occurred:" << endl

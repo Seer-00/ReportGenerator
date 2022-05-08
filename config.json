@@ -1,5 +1,10 @@
-{
-    "enabledpages": [1, 2, 3, 4, 5, 6, 7],
+{	
+	"output_dir": "./output",
+	"report_name": "PDFReport.pdf",
+    "file_info": {
+    	"Creator": "Report Generator",
+    	"Title": "3D 建模可视化报告"
+    },
 
     "optlist": {
     	"errorpolicy": "return",
@@ -20,11 +25,127 @@
     "res_inputflags": "./resource/inputflags.json",
     "res_input_dft" : "./resource/input_default.json",
     "res_input_user": "./input/input_user.json",
-    "res_input_demo": "./resource/demo/input_demo.json",
+    "res_model_info": "./input/model/model_info.xml",
 
-    "output_file": "./temp/_output_test.pdf",
-    "file_info": {
-    	"Creator": "Report Generator",
-    	"Title": "3D 建模可视化报告"
+    "enabled_pages": [5],
+
+    "enabled_models": {
+    	"右肺上叶": {
+    		"type": "stl",
+    		"path": "./input/model/右肺上叶.stl"
+    	},
+    	"右肺下叶": {
+    		"type": "stl",
+    		"path": "./input/model/右肺下叶.stl"
+    	},
+    	"右肺中叶": {
+    		"type": "stl",
+    		"path": "./input/model/右肺中叶.stl"
+    	},
+    	"左肺上叶": {
+    		"type": "stl",
+    		"path": "./input/model/左肺上叶.stl"
+    	},
+    	"左肺下叶": {
+    		"type": "stl",
+    		"path": "./input/model/左肺下叶.stl"
+    	},
+    	"气管": {
+    		"type": "stl",
+    		"path": "./input/model/气管.stl"
+    	},
+    	"肺血管": {
+    		"type": "stl",
+    		"path": "./input/model/肺血管.stl"
+    	},
+    	"肺结节": {
+    		"type": "stl",
+    		"path": "./input/model/肺结节.stl"
+    	}
+    },
+
+    "enabled_views": {
+    	"概览图": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 4,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Elevation -90.0"]
+    	},
+    	"上面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Roll 180.0"]
+    	},
+    	"下面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Elevation 180.0"]
+    	},
+    	"正面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Elevation -90.0"]
+    	},
+    	"背面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Roll 180.0", "Elevation -90.0"]
+    	},
+    	"左侧面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Azimuth 90", "Roll -90"]
+    	},
+    	"右侧面观": {
+    		"type": "png",
+    		"width": 800,
+    		"height": 800,
+    		"scale": 1,
+    		"zoom": 1.0,
+    		"background_color": [1.0, 1.0, 1.0],
+    		"rotation": ["Azimuth -90", "Roll 90"]
+    	}
+    },
+
+    "临时文本": {
+
+    	"说明 1": "这里可以暂存文本，不会被程序读取。需要时，可以移动到上面合适的位置。",
+    	"说明 2": "但也要注意文件格式正确（特别是末尾的逗号）。",
+
+	    "骨骼": {
+	    	"type": "stl",
+	    	"path": "./input/model/骨骼.stl"
+	    },
+	    "肺": {
+		  	"type": "stl",
+		    "path": "./input/model/肺.stl"
+		 },
+	    "皮肤": {
+		    "type": "stl",
+		    "path": "./input/model/皮肤.stl"
+		}
     }
 }
