@@ -3,70 +3,14 @@ mevislabVersion = 3.4.3
 network  {
   watchlist = ""
 }
-module ComposeWEMDescriptionForU3D {
-  internal  {
-    frame = "197 437 216 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "-4 38 788 310"
-        sizeHint = "651 310"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ComposeWEMDescriptionForU3D0
-    U3DObjectName = 肺
-    U3DGroupName = GroupName
-    U3DModelName = ModelName
-    U3DColor = "0 0.666666666666667 1"
-    U3DSpecularColor = "1 1 1"
-    U3DGroupColor = "1 1 1"
-    U3DColorTransparency = 0
-    U3DGroupColorTransparency = 0
-    UseU3DColor = TRUE
-    UseU3DGroupColor = FALSE
-    UseU3DSpecularColor = FALSE
-  }
-}
-module LocalWEMLoad {
-  internal  {
-    frame = "445 437 152 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "99 268 1616 241"
-        sizeHint = "834 241"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = LocalWEMLoad0
-    name = D:/project/project_vs/ReportGenerator/input/model/肺.stl
-    id = 0
-    mirrorFaces = FALSE
-    triangulateFaces = FALSE
-    triangulationMode = Strip
-    generateEdges = TRUE
-    autoUpdate = AutoUpdate
-    autoApply = TRUE
-    overwriteLabelDescription = TRUE
-    label = 肺
-    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=0.0 0.667 1.0 0.0"
-    selectedTab = 0
-  }
-}
 module WEMSaveAsU3D {
   internal  {
-    frame = "617 253 160 56"
+    frame = "737 181 160 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "1288 173 529 257"
+        geometry = "1293 154 529 260"
         sizeHint = "529 257"
         wasOpen = yes
       }
@@ -102,7 +46,7 @@ module WEMSaveAsU3D {
     normalMode = PerNodeNormals
     versionMode = MLVersion
     customVersion = ""
-    filename = D:/project/project_vs/ReportGenerator/output/temp/enabled_models.u3d
+    filename = D:/project/project_vs/ReportGenerator/output/3D/enabled_models.u3d
     parseWEMDescription = TRUE
     inWEMValid = TRUE
     status = "WEM saved to U3D file."
@@ -122,7 +66,7 @@ module WEMMerge {
     }
   }
   fields  {
-    instanceName = WEMMerge
+    instanceName = WEMMerge1
     id = 0
     autoApply = TRUE
     updateMode = AutoUpdate
@@ -139,7 +83,7 @@ module WEMMerge {
 }
 module ComposeWEMDescriptionForU3D {
   internal  {
-    frame = "193 501 224 56"
+    frame = "201 437 224 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -154,7 +98,7 @@ module ComposeWEMDescriptionForU3D {
     U3DObjectName = 气管
     U3DGroupName = GroupName
     U3DModelName = ModelName
-    U3DColor = "1 0.666666666666667 0"
+    U3DColor = "1 1 1"
     U3DSpecularColor = "1 1 1"
     U3DGroupColor = "1 1 1"
     U3DColorTransparency = 0
@@ -166,7 +110,7 @@ module ComposeWEMDescriptionForU3D {
 }
 module LocalWEMLoad {
   internal  {
-    frame = "441 501 160 56"
+    frame = "449 437 160 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
@@ -189,17 +133,428 @@ module LocalWEMLoad {
     autoApply = TRUE
     overwriteLabelDescription = TRUE
     label = 气管
-    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.667 0.0 0.0"
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 1.0 1.0 0.0"
+    selectedTab = 0
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "201 501 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D2
+    U3DObjectName = 肺血管
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "1 0 0"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "449 501 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad2
+    name = D:/project/project_vs/ReportGenerator/input/model/肺血管.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 肺血管
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.0 0.0 0.0"
+    selectedTab = 0
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "641 437 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D3
+    U3DObjectName = 右肺上叶
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "1 0.8 0.627450980392157"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0.40000001
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "889 437 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad3
+    name = D:/project/project_vs/ReportGenerator/input/model/右肺上叶.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 右肺上叶
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.8 0.627 0.4"
+    selectedTab = 0
+  }
+}
+module WEMMerge {
+  internal  {
+    frame = "745 253 144 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "774 482 372 191"
+        sizeHint = "372 191"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMMerge0
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+  }
+}
+module WEMMerge {
+  internal  {
+    frame = "825 333 144 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "774 482 372 191"
+        sizeHint = "372 191"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMMerge2
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "641 501 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D4
+    U3DObjectName = 右肺中叶
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "0.627450980392157 1 1"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0.40000001
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "889 501 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad4
+    name = D:/project/project_vs/ReportGenerator/input/model/右肺中叶.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 右肺中叶
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=0.627 1.0 1.0 0.4"
+    selectedTab = 0
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "641 573 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D5
+    U3DObjectName = 右肺下叶
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "0.627450980392157 1 0.8"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0.40000001
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "889 573 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad5
+    name = D:/project/project_vs/ReportGenerator/input/model/右肺下叶.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 右肺下叶
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=0.627 1.0 0.8 0.4"
+    selectedTab = 0
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "641 637 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D6
+    U3DObjectName = 左肺上叶
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "1 0.913725490196078 0.992156862745098"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0.40000001
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "889 637 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad6
+    name = D:/project/project_vs/ReportGenerator/input/model/左肺上叶.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 左肺上叶
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.914 0.992 0.4"
+    selectedTab = 0
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "641 701 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "735 313 1149 310"
+        sizeHint = "642 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D7
+    U3DObjectName = 左肺下叶
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "1 0.980392156862745 0.627450980392157"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0.40000001
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "889 701 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad7
+    name = D:/project/project_vs/ReportGenerator/input/model/左肺下叶.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 左肺下叶
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.98 0.627 0.4"
     selectedTab = 0
   }
 }
 connections  {
-  LocalWEMLoad0.label = ComposeWEMDescriptionForU3D0.WEMLabel
-  LocalWEMLoad0.description = ComposeWEMDescriptionForU3D0.WEMDescription
-  WEMSaveAsU3D.inWEM = WEMMerge.outWEM
-  WEMMerge.inWEM0 = LocalWEMLoad0.outWEM
-  WEMMerge.inWEM1 = LocalWEMLoad1.outWEM
+  WEMSaveAsU3D.inWEM = WEMMerge0.outWEM
+  WEMMerge1.inWEM0 = LocalWEMLoad1.outWEM
+  WEMMerge1.inWEM1 = LocalWEMLoad2.outWEM
   LocalWEMLoad1.label = ComposeWEMDescriptionForU3D1.WEMLabel
   LocalWEMLoad1.description = ComposeWEMDescriptionForU3D1.WEMDescription
+  LocalWEMLoad2.label = ComposeWEMDescriptionForU3D2.WEMLabel
+  LocalWEMLoad2.description = ComposeWEMDescriptionForU3D2.WEMDescription
+  LocalWEMLoad3.label = ComposeWEMDescriptionForU3D3.WEMLabel
+  LocalWEMLoad3.description = ComposeWEMDescriptionForU3D3.WEMDescription
+  WEMMerge0.inWEM0 = WEMMerge1.outWEM
+  WEMMerge0.inWEM1 = WEMMerge2.outWEM
+  WEMMerge2.inWEM0 = LocalWEMLoad7.outWEM
+  WEMMerge2.inWEM1 = LocalWEMLoad6.outWEM
+  WEMMerge2.inWEM2 = LocalWEMLoad5.outWEM
+  WEMMerge2.inWEM3 = LocalWEMLoad4.outWEM
+  WEMMerge2.inWEM4 = LocalWEMLoad3.outWEM
+  LocalWEMLoad4.label = ComposeWEMDescriptionForU3D4.WEMLabel
+  LocalWEMLoad4.description = ComposeWEMDescriptionForU3D4.WEMDescription
+  LocalWEMLoad5.label = ComposeWEMDescriptionForU3D5.WEMLabel
+  LocalWEMLoad5.description = ComposeWEMDescriptionForU3D5.WEMDescription
+  LocalWEMLoad6.label = ComposeWEMDescriptionForU3D6.WEMLabel
+  LocalWEMLoad6.description = ComposeWEMDescriptionForU3D6.WEMDescription
+  LocalWEMLoad7.label = ComposeWEMDescriptionForU3D7.WEMLabel
+  LocalWEMLoad7.description = ComposeWEMDescriptionForU3D7.WEMDescription
 }
 networkModel = ""

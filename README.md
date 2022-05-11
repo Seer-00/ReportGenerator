@@ -36,15 +36,16 @@
 | ./input/input_default.json               | 作为软件的输入，包含默认的输入信息（**填充内容的默认值**）   |
 | ./input/input_user.json                  | 作为软件的输入，包含用户的输入信息（**填充内容**）           |
 | ./input/report_template.xml              | 作为软件的输入，是待生成报告的模板（**报告模板**）           |
-| ./resource/demo                          | 作为演示资源，可在**配置文件**中将 "res_input_user" 的值设置为 input_demo.json |
-| ./resource/font                          | 作为字体资源，可扩展                                         |
-| ./resource/supplement/MeshLab*.exe       | 作为软件的补充，安装 MeshLab 后，可借助 bat 脚本转换 \*.u3d 或 手动生成 \*.u3d |
-| ./resource/supplement/PLY_TO_U3D.bat     | 作为软件的补充，是 PLY -> U3D 的 bat 脚本，注意编辑其中 MeshLabSever 的路径 |
-| ./resource/supplement/Simplification.mlx | 作为软件的补充，执行上述bat脚本时，可调用的MeshLab脚本，用于简化3D模型 |
-| ./resource/supplement/STL_TO_U3D.mlab    | 作为软件的补充，是 MeVisLab 的工程文件，可用于手动生成 \*.u3d |
+| ./resource/demo                          | 演示资源，可在**配置文件**中将 "res_input_user" 的值设置为 input_demo.json |
+| ./resource/font                          | 字体资源，可扩展                                             |
+| ./resource/supplement/MeshLab*.exe       | 安装 MeshLab 后，可借助 bat 脚本转换 \*.u3d 或 手动生成 \*.u3d |
+| ./resource/supplement/PLY_TO_U3D.bat     | PLY -> U3D 的 bat 脚本，注意编辑其中 MeshLabSever 的路径     |
+| ./resource/supplement/Simplification.mlx | 执行上述 bat 脚本时，可调用的 MeshLab 脚本，用于简化 3D 模型 |
+| ./resource/supplement/STL_TO_U3D.mlab    | MeVisLab 的工程文件，可用于手动生成 \*.u3d                   |
+| ./resource/supplement/MeVisLab_demo.u3d  | 执行上述 \*.mlab 工程得到的样例 \*.u3d 文件，可在**用户输入**中使用 |
 | ./resource/inputflags.json               | 作为资源，在软件运行过程中，提供 模板 映射到 用户输入 的**对应规则** |
 | ./resource/logo.png                      | PDF报告 page 1 的 logo                                       |
-| ./output                                 | 作为软件的工作和输出目录，可以在配置文件中更改 "output_dir"  |
+| ./output                                 | 作为软件的工作和输出目录，可以在**配置文件**中更改 "output_dir" |
 
 #### 第三方库与来源
 
