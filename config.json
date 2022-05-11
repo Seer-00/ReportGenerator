@@ -1,4 +1,4 @@
-{	
+{
 	"output_dir": "./output",
 	"report_name": "PDFReport.pdf",
     "file_info": {
@@ -21,13 +21,14 @@
 	    ]
     },
     
-    "res_template_default": "./resource/template_default.xml",
-    "res_inputflags": "./resource/inputflags.json",
-    "res_input_dft" : "./resource/input_default.json",
+    "res_report_template": "./input/report_template.xml",
+    "res_input_demo": "./resource/demo/input_demo.json",
     "res_input_user": "./input/input_user.json",
+    "res_input_dft" : "./input/input_default.json",
     "res_model_info": "./input/model/model_info.xml",
+    "res_inputflags": "./resource/inputflags.json",
 
-    "enabled_pages": [5],
+    "enabled_pages": [1,2,3,4,5,6,7],
 
     "enabled_models": {
     	"右肺上叶": {
@@ -132,8 +133,8 @@
 
     "临时文本": {
 
-    	"说明 1": "这里可以暂存文本，不会被程序读取。需要时，可以移动到上面合适的位置。",
-    	"说明 2": "但也要注意文件格式正确（特别是末尾的逗号）。",
+    	"说明 1": "// 这里可以暂存文本，不会被程序读取。需要时，可以移动到上面合适的位置。",
+    	"说明 2": "// 但也要注意文件格式正确（特别是末尾的逗号）。",
 
 	    "骨骼": {
 	    	"type": "stl",

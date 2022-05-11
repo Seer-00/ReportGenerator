@@ -5,12 +5,12 @@ extern JSONParser input_dft;
 extern JSONParser input_usr;
 extern map<string, string> inputflags_map;
 
-void init()
+void load_config(string config_path)
 {
 	/* 读配置文件，初始化各模块，config.json 可能含中文，注意转码 */
 
 	// 解析配置文件     config.json
-	config.parse_file("./config.json");
+	config.parse_file(config_path);
 
 	Value cfg = config.get_root();
 	// 解析用户输入文件 input_user.json
@@ -22,20 +22,22 @@ void init()
 	input_dft.parse_file(res_input_dft);
 
 	// 解析模型信息文件 model_info.xml
-	const string res_model_info = utf8_to_str(cfg["res_model_info"].asString());
+	const string res_model_info   = utf8_to_str(cfg["res_model_info"].asString());
 	ModelInfoParser* p_model_info = ModelInfoParser::get_instance();
 	p_model_info->parse_file(res_model_info);
 
-	// 解析默认模板文件 template_default.xml
-	const string res_template_default = utf8_to_str(cfg["res_template_default"].asString());
+	// 解析报告模板文件 report_template.xml
+	const string res_report_template  = utf8_to_str(cfg["res_report_template"].asString());
 	TemplateParser* p_template_parser = TemplateParser::get_instance();
-	p_template_parser->parse_file(res_template_default); 
+	p_template_parser->parse_file(res_report_template); 
 	p_template_parser->init();
 
 	// 解析对应规则文件 inputflags.json
 	const string res_inputflags = utf8_to_str(cfg["res_inputflags"].asString());
 	JSONParser parser(res_inputflags);
 	Value root = parser.get_root();
+	// 可能先后多次导入配置文件，需清空
+	inputflags_map.clear(); 
 	for (string key : root.getMemberNames()) {
 		// 保持utf8，无需转换
 		// 因为 “经过 inputflags_map 进行对应” 的全过程都发生在程序内部，不涉及转码
@@ -44,54 +46,11 @@ void init()
 
 	/* 初始化待生成的 PDF 文件的各项属性，即 optlist */
 	PDFGenerator* p_pdfg = PDFGenerator::get_instance();
-	wstring wkey, wval;
-
-	Value opt = cfg["optlist"];
-	wstring optlist = L"";
-	for (string key : opt.getMemberNames()) {
-		wkey = str2wstr(utf8_to_str(key));
-		if (opt[key].isString()) {
-			wval = str2wstr(utf8_to_str(opt[key].asString()));
-			optlist.append(wkey).append(L"=").append(wval).append(L" ");
-			// e.g. optlist: "errorpolicy=return "
-		}
-		else if (opt[key].isArray()) {
-			optlist.append(wkey).append(L"={");
-			for (unsigned int i = 0; i < opt[key].size(); i++) {
-				wval = str2wstr(utf8_to_str(opt[key][i].asString()));
-				optlist.append(wval).append(L" ");
-			}
-			optlist.append(L"} ");
-			// e.g. optlist: "fontoutline={calibri=calibri.ttf msyh=MicrosoftYaHei.ttf} "
-		}
-	}
-	p_pdfg->get_pdflib().set_option(optlist);
-
-	Value info = cfg["file_info"];
-	for (string key : info.getMemberNames()) {
-		wkey = str2wstr(utf8_to_str(key));
-		wval = str2wstr(utf8_to_str(info[key].asString()));
-		// e.g. wkey: "Title", wval: "3D 建模可视化报告"
-		p_pdfg->get_pdflib().set_info(wkey, wval);
-	}
+	p_pdfg->load_pdflib_config();
 }
 
 void generate_report()
 {
-	//// 先生成 视图 和 渲染后的3D模型
-	//generate_views(); // .png
-	//generate_PLY();   // .ply
-
-	//// 不同的方式生成 u3d
-	//bool auto_to_u3d = true;
-	//if (auto_to_u3d) { 
-	//	convert_PLY_TO_U3D(); 
-	//}
-	//else {
-	//	cout << "等待手动转换得到 U3D 文件 ..." << endl;
-	//	system("pause");
-	//}
-	//
 	PDFGenerator* p_pdfg = PDFGenerator::get_instance();
 	TemplateParser* p_template_parser = TemplateParser::get_instance();
 
@@ -100,6 +59,9 @@ void generate_report()
 	const string report_name = utf8_to_str(cfg["report_name"].asString());
 	const string report_path = output_dir + "/" + report_name;
 	const wstring w_report_path = str2wstr(report_path);
+
+	p_pdfg->renew_pdflib();
+
 	//if (pdf.pdflib().begin_document(output_file, L"compatibility=1.7ext3") == -1) {
 	if (p_pdfg->get_pdflib().begin_document(w_report_path, L"") == -1) {
 		throw CreateFileException(w_report_path, p_pdfg->get_pdflib().get_errmsg());
@@ -133,8 +95,6 @@ void generate_PLY()
 
 void convert_PLY_TO_U3D()
 {
-	bool new_window = true;
-	DWORD creation_flag = new_window ? CREATE_NEW_CONSOLE : CREATE_NO_WINDOW;
 	PROCESS_INFORMATION pi;
 	STARTUPINFO si;
 	ZeroMemory(&si, sizeof(si));
@@ -146,7 +106,8 @@ void convert_PLY_TO_U3D()
 		NULL,
 		NULL,
 		FALSE,
-		creation_flag,
+		//CREATE_NO_WINDOW, // 不创建新的命令行窗口
+		CREATE_NEW_CONSOLE, // 创建新的命令行窗口，以观察bat脚本执行情况
 		NULL,
 		NULL,
 		&si, &pi
@@ -157,6 +118,6 @@ void convert_PLY_TO_U3D()
 		CloseHandle(pi.hThread);
 	}
 	else {
-		throw Exception("Errors happended in converting ply to u3d.");
+		throw Exception("Could not create process when automatically converting ply to u3d.");
 	}
 }

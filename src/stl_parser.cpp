@@ -4,7 +4,10 @@ extern JSONParser config;
 extern Labels labels;
 extern map<string, string> generated_image_map;
 
-STLParser::STLParser() { }
+STLParser::STLParser() 
+{ 
+	STLParser::already_load_stl = false;
+}
 
 STLParser::~STLParser() { }
 
@@ -16,16 +19,15 @@ STLParser* STLParser::get_instance()
 
 void STLParser::load_stl_files()
 {
-	/* 根据 config.json 文件中的 enabled_models，
-	/* 结合 model_info.xml 中对应的属性，加载 STL 文件。
-	/* 额外工作：
-		1. 生成“颜色标示”所需的纯色 PNG 文件
-		2. 将读入数据保存至 polydata 并设置颜色，
-		   再存入 append_polydata，为后续生成 PLY 文件做准备
-	*/
+	/* 根据 config.json 文件中的 enabled_models，             */
+	/* 结合 model_info.xml 中对应的属性，加载 STL 文件        */
+	/* 额外工作：                                             */
+	/*	1. 生成“颜色标示”所需的纯色 PNG 文件                  */
+	/*	2. 将读入数据保存至 polydata 并设置颜色，             */
+	/*	   再存入 append_polydata，为后续生成 PLY 文件做准备  */
 
-	if (has_read_stl) { return; }
-	else { has_read_stl = true; }
+	if (already_load_stl) { return; }
+	else { already_load_stl = true; }
 
 	// 【额外工作】预生成 纯白色 PNG
 	Value cfg = config.get_root();
@@ -93,6 +95,8 @@ void STLParser::load_stl_files()
 
 void STLParser::show_models()
 {
+	/* [!] 调用该方法前，必须先调用 load_stl_files() 以加载模型文件 */
+
 	vtkNew<vtkRenderWindow> ren_win; // 用于预览模型的窗口
 	vtkNew<vtkRenderWindowInteractor> renWinInteractor;
 	ren_win->AddRenderer(renderer);		        // 关联
@@ -107,9 +111,9 @@ void STLParser::show_models()
 
 void STLParser::capture_views()
 {
-	/* 根据 config.json 文件中的 enabled_views，
-	/* 调整相机角度，并保存相应格式的图片文件。
-	/* 读入数据异常时，这里采用默认值，当然也可以按需抛异常。*/
+	/* 根据 config.json 文件中的 enabled_views                      */
+	/* 调整相机角度，并保存相应格式的图片文件                       */
+	/* 读入数据异常时，这里采用默认值，当然也可以按需抛异常         */
 	/* [!] 调用该方法前，必须先调用 load_stl_files() 以加载模型文件 */
 
 	vtkNew<vtkRenderWindow> ren_win;		// 用于截图的窗口
@@ -190,7 +194,7 @@ void STLParser::write_image(string const& name, string const& type, const int& s
 
 	Value cfg = config.get_root();
 	const string out_dir  = utf8_to_str(cfg["output_dir"].asString());
-	const string filename = out_dir + "/" + name + "." + type;
+	const string filename = VIEW_SAVE_PATH(out_dir, name, type);
 	writer->SetFileName(filename.c_str());
 	writer->SetInputConnection(window_to_image_filter->GetOutputPort());
 	writer->Write();
@@ -205,7 +209,7 @@ void STLParser::write_label_image(string const& name, const double rgb[3])
 	img_source->SetScalarTypeToUnsignedChar();  // 设置标量数据类型
 	img_source->SetNumberOfScalarComponents(3); // 设置标量数据维度
 	img_source->SetDrawColor(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
-	img_source->FillBox(0, 22, 0, 10);
+	img_source->FillBox(0, LABEL_W, 0, LABEL_H);
 	img_source->Update();
 
 	vtkNew<vtkImageCast> cast_filter;
@@ -228,6 +232,8 @@ void STLParser::write_ply()
 	vtkNew<vtkPLYWriter> plyWriter;
 	plyWriter->SetFileName(filename.c_str());
 	plyWriter->SetArrayName("Colors");
+	//plyWriter->SetFileTypeToASCII();
+	plyWriter->SetFileTypeToBinary();  // 二进制格式可节省存储空间
 	plyWriter->SetInputConnection(append_polydata->GetOutputPort());
 	plyWriter->Write();
 }

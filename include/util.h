@@ -10,6 +10,12 @@
 #include <vector>
 #include <windows.h>
 
+#include <QtWidgets/QMainWindow>
+
+std::string q2s(const QString& qstr);
+
+QString s2q(const std::string& str);
+
 std::string str_to_utf8(const std::string& str);
 
 std::string utf8_to_str(const std::string& str);

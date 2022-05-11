@@ -3,14 +3,14 @@
 :: 根据需要编辑以下路径
 
 :: 1. 在程序中调用时，"."表示项目路径。
-set input_ply="./output/temp/enabled_models.ply"
-set output_u3d="./output/temp/enabled_models.u3d"
-set script_file="./resource/Simplification.mlx"
+set input_ply="./output/3D/enabled_models.ply"
+set output_u3d="./output/3D/enabled_models.u3d"
+set script_file="./resource/supplement/Simplification.mlx"
 set meshlabserver="D:/Program Files/VCG/MeshLab/meshlabserver.exe"
 
 :: 2. 双击运行该bat文件时，"."表示bat所在目录。
-::set input_ply="../output/temp/enabled_models.ply"
-::set output_u3d="../output/temp/enabled_models.u3d"
+::set input_ply="../output/3D/enabled_models.ply"
+::set output_u3d="../output/3D/enabled_models.u3d"
 ::set script_file="./Simplification.mlx"
 ::set meshlabserver="D:/Program Files/VCG/MeshLab/meshlabserver.exe"
 
@@ -23,7 +23,7 @@ echo "Converting (%input_ply%) to (%output_u3d%) with script (%script_file%)."
 
 ::pause
 
-
+:: --------------------------------------------------------------------------------------------
 :: meshlabserver usage:
 ::	 meshlabserver arg1 arg2 ...  
 :: where args can be: 

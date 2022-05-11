@@ -6,7 +6,7 @@ extern JSONParser input_usr;
 extern map<string, string> inputflags_map;
 
 // 定义全局变量
-Labels labels;
+Labels labels; // page2 颜色标示
 map<string, string> generated_image_map; // key: 视图名称，value: 视图路径
 
 /* XMLParser */
@@ -53,9 +53,9 @@ void TemplateParser::parse_template()
 	for (xml_node page_node : xml.children("page")) {
 		string page_id = page_node.child_value("id");
 		if (is_enabled(enabled_pages, page_id)) {
-			cout << "#------ Start parsing page " << page_id << endl;
+			//cout << "#------ Start parsing page " << page_id << endl;
 			parse_node_page(page_node);
-			cout << endl;
+			//cout << endl;
 		}
 	}
 }
@@ -65,37 +65,37 @@ void TemplateParser::parse_node_page(xml_node& page_node)
 	for (xml_node child : page_node.children()) {
 		switch (switch_map[child.name()]) {
 		case _NODE_BEG_PAGE: {
-			cout << "parse_node_beg_page" << endl;
+			//cout << "parse_node_beg_page" << endl;
 			parse_node_beg_page(child);
 			break;
 		}
 		case _NODE_END_PAGE: {
-			cout << "parse_node_end_page" << endl;
+			//cout << "parse_node_end_page" << endl;
 			parse_node_end_page(child);
 			break;
 		}
 		case _NODE_IMAGE: {
-			cout << "parse_node_img" << endl;
+			//cout << "parse_node_img" << endl;
 			parse_node_img(child);
 			break;
 		}
 		case _NODE_TABLE: {
-			cout << "parse_node_tbl" << endl;
+			//cout << "parse_node_tbl" << endl;
 			parse_node_tbl(child);
 			break;
 		}
 		case _NODE_TEXTLINE: {
-			cout << "parse_node_tl" << endl;
+			//cout << "parse_node_tl" << endl;
 			parse_node_tl(child);
 			break;
 		}
 		case _NODE_TEXTFLOW: {
-			cout << "parse_node_tf" << endl;
+			//cout << "parse_node_tf" << endl;
 			parse_node_tf(child);
 			break;
 		}
 		case _NODE_ANNOTATION_3D: {
-			cout << "parse_node_3d_annotation" << endl;
+			//cout << "parse_node_3d_annotation" << endl;
 			parse_node_3d_annotation(child);
 			break;
 		}
@@ -221,7 +221,7 @@ int TemplateParser::parse_node_tf(xml_node& tf_node)
 		return -1;
 	}
 	else {
-		return tf; // 不直接填充，仅仅创建textflow资源，并返回句柄。例如，用于填充表格单元格。
+		return tf; // 不直接填充，仅仅创建 textflow 资源，并返回句柄。例如，用于填充表格单元格。
 	}
 }
 
@@ -278,7 +278,7 @@ void TemplateParser::parse_node_3d_annotation(xml_node& annotation_3d_node)
 	string ury  = annotation_3d_node.child_value("ury");
 	string type = annotation_3d_node.child_value("type");
 	string opt  = annotation_3d_node.child_value("optlist");
-	// 这里默认第一个 view 作为 3Dinitialview
+	// 这里默认第1个 view 作为 3Dinitialview
 	opt.append(" 3Ddata=").append(int2str(data)).append(" 3Dinitialview=").append(int2str(views[0]));
 	pdf->get_pdflib().create_annotation(
 		str2double(llx), str2double(lly), str2double(urx), str2double(ury), str2wstr(type), str2wstr(opt)
@@ -287,7 +287,7 @@ void TemplateParser::parse_node_3d_annotation(xml_node& annotation_3d_node)
 
 void TemplateParser::handle_flag(xml_node& _node, string& field, const char* _childname)
 {
-	/* 处理 inputflag, generateflag，将最终结果记录在 field 中 */
+	/* 处理 inputflag, generateflag，将最终结果记录在 field 中                 */
 	/* [!] 按当前的设计：一个 node 中最多只含一个 flag，只会走下面三个分支之一 */
 	string inputflag    = _node.child_value("inputflag");
 	string generateflag = _node.child_value("generateflag");
@@ -304,7 +304,8 @@ void TemplateParser::handle_flag(xml_node& _node, string& field, const char* _ch
 
 string TemplateParser::handle_inputflag(xml_node& _node, const char* _childname)
 {
-	// inputflag 不为空，说明该内容由用户决定，返回 普通内容、默认内容、生成内容 其中之一
+	/* inputflag 不为空，说明该内容由用户决定，   */
+	/* 返回 普通内容、默认内容、生成内容 其中之一 */
 	// [!] 用户输入是 utf8，需转换编码
 	// e.g.
 	//   flag:	"p-1-img-1"
@@ -329,7 +330,8 @@ string TemplateParser::handle_inputflag(xml_node& _node, const char* _childname)
 
 	// 【生成内容】调用 相应函数 完成内容的生成
 	if (val == GENERATE) {
-		key = utf8_to_str(key); // 程序内判断 key 与给定字符串是否相等前，需将 key 从 utf8 转成 str
+		// 程序内判断 key 与给定字符串是否相等前，需将 key 从 utf8 转成 str
+		key = utf8_to_str(key);
 		if (key == "年" || key == "月" || key == "日" || key == "建模日期") {
 			val = get_date(key);
 			return val; // 无需转换 utf8_to_str
@@ -346,7 +348,7 @@ string TemplateParser::handle_inputflag(xml_node& _node, const char* _childname)
 			val = U3D_MODEL_PATH(out);
 			return val; // 如果 U3D_MODEL_PATH(out) 仅含英文字符，则无需转换 utf8_to_str
 		}
-		val = GENERATE; // 不应该走到这里
+		val = GENERATE; // [!] 不应该走到这里
 	}
 	// 【普通内容】无需进一步处理 val
 
@@ -358,7 +360,7 @@ string TemplateParser::handle_inputflag(xml_node& _node, const char* _childname)
 
 string TemplateParser::handle_generateflag(xml_node& _node, const char* _childname)
 {
-	// generateflag 不为空，说明该内容必须由程序生成
+	/* generateflag 不为空，说明该内容必须由程序生成 */
 	// [!] 相关数据流只存于程序内部，不涉及外部输入，无需编码转换
 	// e.g. label-img
 	//   flag	: "p-2-label-img-5"
@@ -506,5 +508,3 @@ void ModelInfoParser::get_color(xml_node& model_node, double* color, int size)
 	// throw XMLParserException("The property \"color\" not found in model_info.xml");
 	color[0] = color[1] = color[2] = 0.0;
 }
-
-

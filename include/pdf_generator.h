@@ -6,6 +6,7 @@
 
 #include "util.h"
 #include "program_exception.h"
+#include "json_parser.h"
 
 using namespace std;
 using namespace pdflib;
@@ -31,13 +32,17 @@ public:
 
 	wstring fit_table(int table, double llx, double lly, double urx, double ury, const wstring& optlist);
 
+	void renew_pdflib(); // todo: 似乎生成pdf的过程中，如果pdflib出现一次异常，就无法恢复正常
+
+	void load_pdflib_config(); // 将 config.json 中关于 pdflib 的部分导入并设置
+
 private:
 	PDFGenerator();
 	~PDFGenerator();
 	PDFGenerator(const PDFGenerator&);
 
 private:
-	PDFlib pdflib;
+	PDFlib* p_pdflib;
 };
 
 #endif // !PDF_GENERATOR_H

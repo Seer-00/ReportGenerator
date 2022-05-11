@@ -46,7 +46,7 @@ public:
     vtkNew<vtkRenderer> renderer;
     vtkNew<vtkAppendPolyData> append_polydata;
 
-    bool has_read_stl; // 已执行过 load_stl_files()
+    bool already_load_stl; // 已执行过 load_stl_files()
 
 public:
 	static STLParser* get_instance();

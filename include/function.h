@@ -7,7 +7,9 @@
 #include "json_parser.h"
 #include "stl_parser.h"
 
-void init();
+#define DEFAULT_CONFIG_PATH ("./config.json")
+
+void load_config(string config_path);
 
 void generate_report();
 

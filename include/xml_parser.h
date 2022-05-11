@@ -25,19 +25,22 @@
 using namespace std;
 using namespace pugi;
 
+// 生成的视图文件的保存路径
+#define VIEW_SAVE_PATH(outdir, name, type) (outdir + "/views/" + name + "." + type)
+
 // 生成的 PLY 文件的写路径
-#define PLY_MODEL_PATH(outdir) (outdir + "/temp/enabled_models.ply")
+#define PLY_MODEL_PATH(outdir) (outdir + "/3D/enabled_models.ply")
 // 生成的 U3D 文件的读路径
-#define U3D_MODEL_PATH(outdir) (outdir + "/temp/enabled_models.u3d")
+#define U3D_MODEL_PATH(outdir) (outdir + "/3D/enabled_models.u3d")
 // PLY -> U3D 的 .bat 路径
-#define PLY_TO_U3D_PATH (L".\\resource\\PLY_TO_U3D.bat")
+#define PLY_TO_U3D_PATH (L".\\resource\\supplement\\PLY_TO_U3D.bat")
 
 struct Labels // 专用于生成 PDF 报告的 page2 的 "颜色标示" 部分
 {
 // 拼接“颜色标示”图片的读写路径 
-#define LABEL_IMAGE_PATH(outdir, name) (outdir + "/temp/" + name + ".png")
+#define LABEL_IMAGE_PATH(outdir, name) (outdir + "/labels/" + name + ".png")
 // “颜色标示”中纯白色默认图片的名字
-#define LABEL_IMAGE_WHITE "white_default"
+#define LABEL_IMAGE_WHITE "default"
 #define LABEL_W 22.0 // 像素
 #define LABEL_H 10.0 // 像素
     int idx = 1;                // 用于插入 name_map 时，作为第一项

@@ -1,5 +1,16 @@
 #include "util.h"
 
+std::string q2s(const QString& qstr)
+{
+	QByteArray cdata = qstr.toLocal8Bit();
+	return std::string(cdata);
+}
+
+QString s2q(const std::string& str)
+{
+	return QString::fromLocal8Bit(str.data());
+}
+
 std::string str_to_utf8(const std::string& str)
 {
 	int nwLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, NULL, 0);
@@ -131,7 +142,7 @@ std::string get_date(const std::string& key)
 
 std::string replace_all(std::string& str, const std::string& _old, const std::string& _new)
 {
-	// O(n) 将str中所有_old替换为_new
+	/* O(n) 将 str 中所有 _old 替换为 _new */
 	std::string ret = str;
 	std::string::size_type pos = 0;
 	while ((pos = ret.find(_old)) != std::string::npos) {
@@ -142,6 +153,7 @@ std::string replace_all(std::string& str, const std::string& _old, const std::st
 
 std::vector<std::string> split_string(const std::string& str, const char sep)
 {
+	/* O(n) 根据 sep 将 str 分隔为多个字符串，存入 vector<string> 并将其返回 */
 	std::size_t previous = 0;
 	std::size_t current = str.find(sep);
 	std::vector<std::string> ret;

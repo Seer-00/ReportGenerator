@@ -1,0 +1,205 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.3
+network  {
+  watchlist = ""
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "197 437 216 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "-4 38 788 310"
+        sizeHint = "651 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D0
+    U3DObjectName = 肺
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "0 0.666666666666667 1"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "445 437 152 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad0
+    name = D:/project/project_vs/ReportGenerator/input/model/肺.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 肺
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=0.0 0.667 1.0 0.0"
+    selectedTab = 0
+  }
+}
+module WEMSaveAsU3D {
+  internal  {
+    frame = "617 253 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1288 173 529 257"
+        sizeHint = "529 257"
+        wasOpen = yes
+      }
+      window _automatic {
+        geometry = "919 134 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+      window DefaultSettings {
+        geometry = "728 163 377 317"
+        sizeHint = "377 317"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMSaveAsU3D
+    autoApply = FALSE
+    autoUpdate = FALSE
+    autoClear = TRUE
+    listenToFinishingNotifications = FALSE
+    listenToRepaintNotifications = FALSE
+    listenToSelectionChangedNotifications = FALSE
+    defaultGroupName = DefaultGroup
+    defaultShaderName = DefaultShader
+    defaultMaterialName = DefaultMaterial
+    defaultLightName = DefaultAmbientLight
+    defaultMaterialAmbientColor = "0 0 0"
+    defaultMaterialDiffuseColor = "0.75 0.75 0.75"
+    defaultMaterialSpecularColor = "0.75 0.75 0.75"
+    defaultMaterialEmissiveColor = "0 0 0"
+    defaultMaterialTransparency = 0
+    normalMode = PerNodeNormals
+    versionMode = MLVersion
+    customVersion = ""
+    filename = D:/project/project_vs/ReportGenerator/output/temp/enabled_models.u3d
+    parseWEMDescription = TRUE
+    inWEMValid = TRUE
+    status = "WEM saved to U3D file."
+  }
+}
+module WEMMerge {
+  internal  {
+    frame = "625 333 144 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "774 482 372 191"
+        sizeHint = "372 191"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMMerge
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+  }
+}
+module ComposeWEMDescriptionForU3D {
+  internal  {
+    frame = "193 501 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "736 662 1158 310"
+        sizeHint = "651 310"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComposeWEMDescriptionForU3D1
+    U3DObjectName = 气管
+    U3DGroupName = GroupName
+    U3DModelName = ModelName
+    U3DColor = "1 0.666666666666667 0"
+    U3DSpecularColor = "1 1 1"
+    U3DGroupColor = "1 1 1"
+    U3DColorTransparency = 0
+    U3DGroupColorTransparency = 0
+    UseU3DColor = TRUE
+    UseU3DGroupColor = FALSE
+    UseU3DSpecularColor = FALSE
+  }
+}
+module LocalWEMLoad {
+  internal  {
+    frame = "441 501 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "99 268 1616 241"
+        sizeHint = "834 241"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalWEMLoad1
+    name = D:/project/project_vs/ReportGenerator/input/model/气管.stl
+    id = 0
+    mirrorFaces = FALSE
+    triangulateFaces = FALSE
+    triangulationMode = Strip
+    generateEdges = TRUE
+    autoUpdate = AutoUpdate
+    autoApply = TRUE
+    overwriteLabelDescription = TRUE
+    label = 气管
+    description = "U3DGroupName=GroupName;U3DModelName=ModelName;U3DColor=1.0 0.667 0.0 0.0"
+    selectedTab = 0
+  }
+}
+connections  {
+  LocalWEMLoad0.label = ComposeWEMDescriptionForU3D0.WEMLabel
+  LocalWEMLoad0.description = ComposeWEMDescriptionForU3D0.WEMDescription
+  WEMSaveAsU3D.inWEM = WEMMerge.outWEM
+  WEMMerge.inWEM0 = LocalWEMLoad0.outWEM
+  WEMMerge.inWEM1 = LocalWEMLoad1.outWEM
+  LocalWEMLoad1.label = ComposeWEMDescriptionForU3D1.WEMLabel
+  LocalWEMLoad1.description = ComposeWEMDescriptionForU3D1.WEMDescription
+}
+networkModel = ""

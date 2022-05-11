@@ -25,6 +25,8 @@ Value& JSONParser::get_root()
 
 void JSONParser::parse_file(const string& filename)
 {
+	if (ifs) { ifs.close(); } // 可能重复导入json文件，需正确关闭前一个文件
+
 	ifs.open(filename);
 	if (!ifs) {
 		throw JSONParserException("Open file [" + filename + "] failed.");

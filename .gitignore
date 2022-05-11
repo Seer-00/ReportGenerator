@@ -1,5 +1,6 @@
-.vs
-Debug
-x64
-temp
-*.vcxproj*
+/.vs
+/Debug
+/x64
+/temp
+/release/release.zip
+/*.vcxproj*
