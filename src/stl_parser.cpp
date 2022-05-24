@@ -90,7 +90,9 @@ void STLParser::load_stl_files()
 		actor->GetProperty()->SetColor(color[0], color[1], color[2]); // RGB颜色
 		renderer->AddActor(actor);
 	}
+	// 备份最初的相机
 	renderer->ResetCamera();
+	origin_camera->DeepCopy(renderer->GetActiveCamera());
 }
 
 void STLParser::show_models()
@@ -101,7 +103,10 @@ void STLParser::show_models()
 	vtkNew<vtkRenderWindowInteractor> renWinInteractor;
 	ren_win->AddRenderer(renderer);		        // 关联
 	renWinInteractor->SetRenderWindow(ren_win); // 关联
-	renderer->ResetCamera();
+	// 每次预览模型时，使用一个新相机，以最初相机为基准
+	vtkNew<vtkCamera> camera; 
+	camera->DeepCopy(origin_camera);
+	renderer->SetActiveCamera(camera);
 	renderer->SetBackground(1.0, 1.0, 1.0);
 	ren_win->SetSize(400, 400);
 	ren_win->SetWindowName("STL模型预览");
@@ -121,6 +126,10 @@ void STLParser::capture_views()
 	ren_win->SetOffScreenRendering(true);	// 不显示窗口
 	ren_win->AddRenderer(renderer);			// 关联
 
+	// 一个专用于截图的相机
+	vtkNew<vtkCamera> temp_camera;
+	renderer->SetActiveCamera(temp_camera);
+
 	ModelInfoParser* p_model_info = ModelInfoParser::get_instance();
 	Value enviews = config.get_root()["enabled_views"];
 	string type;
@@ -133,7 +142,7 @@ void STLParser::capture_views()
 		const int height   = view["height"].asInt();  // e.g. 800
 		const int scale    = view["scale"].asInt();	  // e.g. 1
 		const double zoom  = view["zoom"].asDouble(); // e.g. 1.0
-		double bgc[3]; // e.g. [1.0, 1.0, 1.0]
+		double bgc[3];                                // e.g. [1.0, 1.0, 1.0]
 		bgc[0] = bgc[1] = bgc[2] = 1.0; // 默认
 		Value bgcs = view["background_color"];
 		if (bgcs.isArray() && bgcs.size() == 3) {
@@ -143,9 +152,8 @@ void STLParser::capture_views()
 		}
 		// 设置背景颜色
 		renderer->SetBackground(bgc[0], bgc[1], bgc[2]);
-		// 备份原相机
-		vtkNew<vtkCamera> origin_camera;
-		origin_camera->DeepCopy(renderer->GetActiveCamera());
+		// 用于截图的相机，以最初相机为基准
+		temp_camera->DeepCopy(origin_camera);
 		// 调整用于截图的相机
 		Value rotation = view["rotation"]; // e.g. ["Azimuth 10.0", "Roll 45.0"]
 		vector<string> vec_rot;	           // e.g. ["Azimuth", "10.0"]
@@ -166,8 +174,6 @@ void STLParser::capture_views()
 		ren_win->Render();
 		// 捕获截图
 		write_image(name, type, scale, ren_win);
-		// 恢复原相机
-		renderer->SetActiveCamera(origin_camera);
 	}
 }
 

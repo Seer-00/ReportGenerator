@@ -3,5 +3,6 @@
 /x64
 /temp
 /release/release.zip
+/release/release
 /output
 /*.vcxproj*

@@ -44,6 +44,7 @@ class STLParser // 单例，用于解析 STL 文件，生成 PNG 图片、u3d 文件等
 {
 public:
     vtkNew<vtkRenderer> renderer;
+    vtkNew<vtkCamera> origin_camera;
     vtkNew<vtkAppendPolyData> append_polydata;
 
     bool already_load_stl; // 已执行过 load_stl_files()
